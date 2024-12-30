@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.join(__dirname, "../my-react-app", "dist", "index.html"));
     });
 }
-app.listen(PORT, () => {
+app.listen(PORT,'0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
 });
 app.get('/', (req, res) => {
